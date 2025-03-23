@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 220 10% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 25%;
+
+    --primary: 220 70% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 10 80% 85%;
+    --secondary-foreground: 220 10% 25%;
+
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 5% 45%;
+
+    --accent: 10 80% 85%;
+    --accent-foreground: 220 10% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 220 70% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 40 33% 98%;
+    --sidebar-foreground: 220 10% 25%;
+    --sidebar-primary: 220 70% 50%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 10 80% 85%;
+    --sidebar-accent-foreground: 220 10% 25%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 220 70% 50%;
+  }
+
+  .dark {
+    --background: 220 20% 12%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 220 60% 60%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 10 50% 30%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 10% 70%;
+
+    --accent: 10 50% 30%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 240 10% 25%;
+    --input: 240 10% 25%;
+    --ring: 220 60% 60%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 220 60% 60%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 10 50% 30%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 240 10% 25%;
+    --sidebar-ring: 220 60% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-handwritten font-semibold;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Task animations */
+.task-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.task-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.task-exit {
+  opacity: 1;
+}
+
+.task-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Custom checkbox styles */
+.custom-checkbox {
+  @apply relative w-5 h-5 border-2 rounded-full transition-all duration-200 cursor-pointer;
+}
+
+.custom-checkbox::after {
+  content: "";
+  @apply absolute inset-0 m-auto w-2 h-2 rounded-full scale-0 transition-transform duration-200;
+}
+
+.custom-checkbox.checked {
+  @apply border-primary bg-primary/10;
+}
+
+.custom-checkbox.checked::after {
+  @apply bg-primary scale-100;
+}
+
+/* Custom select styles */
+.custom-select {
+  @apply appearance-none bg-none pr-8 cursor-pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+
+/* Paper effect */
+.paper {
+  @apply bg-paper shadow-paper transition-shadow duration-300;
+}
+
+.paper:hover {
+  @apply shadow-paper-hover;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-glass shadow-glass border border-white/20;
+}
+
+/* Additional animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+/* Homepage section styles */
+.homepage-section {
+  @apply py-16;
+}
+
+.homepage-card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6;
+}
+
+.homepage-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Hero button glow */
+.hero-button {
+  @apply relative;
+}
+
+.hero-button::after {
+  content: "";
+  @apply absolute inset-0 rounded-full bg-amber-500 blur-lg opacity-30;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover::after {
+  @apply opacity-60;
+  transform: scale(1.1);
+}
+
+/* Task page styling to match home page */
+.task-page {
+  @apply bg-amber-50;
+}
+
+.task-container {
+  @apply bg-white rounded-xl shadow-lg p-6 mb-6;
+}
+
+.task-header {
+  @apply text-amber-800 font-handwritten;
+}
+
+.task-item {
+  @apply bg-white border border-amber-100 rounded-lg shadow-sm hover:shadow transition-shadow mb-3;
+}
+
+.task-button {
+  @apply bg-amber-600 hover:bg-amber-700 text-white font-handwritten;
+}
+
+.task-input {
+  @apply border-amber-200 focus:border-amber-500 focus:ring-amber-500;
+}
+
+.add-task-button {
+  @apply bg-amber-600 hover:bg-amber-700 text-white font-handwritten rounded-full;
+}
+
+/* AI Suggestions Section */
+.ai-suggestion {
+  @apply bg-amber-50 p-4 rounded-xl border border-amber-200 mb-4;
+}
+
+.ai-suggestion-header {
+  @apply flex items-center gap-2 text-amber-800 font-handwritten text-lg mb-2;
+}
+
+.ai-suggestion-content {
+  @apply text-amber-700 font-handwritten;
+}
+
+.ai-suggestion-button {
+  @apply bg-amber-600 hover:bg-amber-700 text-white text-sm py-1 px-3 rounded-full font-handwritten;
+}

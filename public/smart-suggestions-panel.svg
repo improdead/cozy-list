@@ -1,0 +1,54 @@
+<svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect x="50" y="50" width="300" height="500" rx="20" ry="20" fill="#ffffff" stroke="#f3e8d2" stroke-width="2" />
+  
+  <!-- Header -->
+  <rect x="50" y="50" width="300" height="60" rx="20" ry="20" fill="#f9f5eb" />
+  <text x="110" y="85" font-family="cursive" font-size="18" fill="#b5833b">✨ Smart Suggestions</text>
+  
+  <!-- Weekly Analysis Section -->
+  <rect x="70" y="120" width="260" height="180" rx="10" ry="10" fill="#f9f5eb" opacity="0.7" />
+  <text x="90" y="145" font-family="cursive" font-size="16" fill="#a67c52">Weekly Analysis</text>
+  <text x="90" y="170" font-family="cursive" font-size="12" fill="#a67c52">The user is focused on improving grades, with two work-</text>
+  <text x="90" y="190" font-family="cursive" font-size="12" fill="#a67c52">related tasks and one health-related task. The 'Dedicate 2</text>
+  <text x="90" y="210" font-family="cursive" font-size="12" fill="#a67c52">hours to studying' task is prioritized as high, indicating a</text>
+  <text x="90" y="230" font-family="cursive" font-size="12" fill="#a67c52">strong focus on academic improvement. The user is also</text>
+  <text x="90" y="250" font-family="cursive" font-size="12" fill="#a67c52">planning ahead with a study schedule. The health task</text>
+  <text x="90" y="270" font-family="cursive" font-size="12" fill="#a67c52">seems to be proactive in planning and prioritizing tasks.</text>
+  
+  <!-- Suggested Tasks Section -->
+  <text x="90" y="320" font-family="cursive" font-size="16" fill="#a67c52">💡 Suggested Tasks</text>
+  
+  <!-- Task 1 -->
+  <rect x="70" y="340" width="260" height="60" rx="10" ry="10" fill="#f9f5eb" opacity="0.7" />
+  <text x="90" y="365" font-family="cursive" font-size="14" fill="#a67c52">Review notes for 1 hour before starting</text>
+  <text x="90" y="385" font-family="cursive" font-size="14" fill="#a67c52">the study session</text>
+  <rect x="90" y="395" width="40" height="20" rx="10" ry="10" fill="#f8d7da" />
+  <text x="100" y="410" font-family="sans-serif" font-size="12" fill="#dc3545">high</text>
+  <rect x="140" y="395" width="40" height="20" rx="10" ry="10" fill="#e0cffc" />
+  <text x="147" y="410" font-family="sans-serif" font-size="12" fill="#6f42c1">work</text>
+  <rect x="230" y="395" width="60" height="25" rx="12" ry="12" fill="#cd9042" />
+  <text x="245" y="412" font-family="sans-serif" font-size="12" fill="#ffffff">Add</text>
+  
+  <!-- Task 2 -->
+  <rect x="70" y="430" width="260" height="60" rx="10" ry="10" fill="#f9f5eb" opacity="0.7" />
+  <text x="90" y="455" font-family="cursive" font-size="14" fill="#a67c52">Plan a relaxing activity for the weekend</text>
+  <text x="90" y="475" font-family="cursive" font-size="14" fill="#a67c52">to de-stress (e.g., watch a movie, read a book)</text>
+  <rect x="90" y="485" width="60" height="20" rx="10" ry="10" fill="#fff3cd" />
+  <text x="95" y="500" font-family="sans-serif" font-size="12" fill="#856404">medium</text>
+  <rect x="160" y="485" width="50" height="20" rx="10" ry="10" fill="#d1e7dd" />
+  <text x="167" y="500" font-family="sans-serif" font-size="12" fill="#0f5132">health</text>
+  <rect x="230" y="485" width="60" height="25" rx="12" ry="12" fill="#cd9042" />
+  <text x="245" y="502" font-family="sans-serif" font-size="12" fill="#ffffff">Add</text>
+  
+  <!-- Task 3 -->
+  <rect x="70" y="520" width="260" height="60" rx="10" ry="10" fill="#f9f5eb" opacity="0.7" />
+  <text x="90" y="545" font-family="cursive" font-size="14" fill="#a67c52">Break down the study schedule into daily</text>
+  <text x="90" y="565" font-family="cursive" font-size="14" fill="#a67c52">chunks, allocating specific subjects to each day</text>
+  <rect x="90" y="575" width="60" height="20" rx="10" ry="10" fill="#fff3cd" />
+  <text x="95" y="590" font-family="sans-serif" font-size="12" fill="#856404">medium</text>
+  <rect x="160" y="575" width="50" height="20" rx="10" ry="10" fill="#e0cffc" />
+  <text x="167" y="590" font-family="sans-serif" font-size="12" fill="#6f42c1">work</text>
+  <rect x="230" y="575" width="60" height="25" rx="12" ry="12" fill="#cd9042" />
+  <text x="245" y="592" font-family="sans-serif" font-size="12" fill="#ffffff">Add</text>
+</svg>
